@@ -1,0 +1,16 @@
+image:
+  file: .gitpod.Dockerfile
+
+ports:
+- port: 3333
+  onOpen: open-preview
+
+tasks:
+- before: >
+    echo "starting..."
+  init: >
+    pnpm install
+    pnpm build
+  command: >
+    pnpm dev
+
