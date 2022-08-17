@@ -1,4 +1,3 @@
-
 context('Basic', () => {
   beforeEach(() => {
     cy.visit('/')
@@ -31,7 +30,7 @@ context('Basic', () => {
       .url()
       .should('eq', 'http://localhost:3333/about')
 
-    cy.get('pre.language-js')
+    cy.get('.shiki')
       .should('exist')
   })
 })
